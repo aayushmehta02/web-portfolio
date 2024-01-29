@@ -1,4 +1,4 @@
-let currentIndex = 1;
+let currentIndex = 0;
 const totalCards = document.getElementsByClassName('card');
 totalCardsLength = 6
 
