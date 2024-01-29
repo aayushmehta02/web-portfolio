@@ -564,6 +564,10 @@ a{
         margin-right: 10px;
         transition: transform 0.5s ease-in-out;
     }
+    .in-touch-box-wrapper{
+        font-size: smaller;
+        width: 95%;
+    }
     
     
 }
@@ -597,6 +601,10 @@ a{
         width: 30%;
         height: 40%;
     }
+    .in-touch-box-wrapper{
+        font-size: smaller;
+        width: 95%;
+    }
 }
 
 @media screen and (max-width:426px) {
@@ -605,7 +613,9 @@ a{
     }
     .in-touch-box-wrapper{
         font-size: smaller;
+        width: 95%;
     }
+    
 }
 @media screen and (max-width:380px) {
     .in-touch-box-wrapper{
