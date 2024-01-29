@@ -1,6 +1,6 @@
 let currentIndex = 1;
 const totalCards = document.getElementsByClassName('card');
-totalCardsLength = 7
+totalCardsLength = 6
 
 const windowWidth = window.innerWidth;
 

@@ -614,6 +614,6 @@ a{
 }
 
 h1{
-    text-decoration: 5px solid underline;
-    text-decoration-color: #00F0FF;
+    text-decoration: 5px solid underline !important;
+    text-decoration-color: #00F0FF !important;
 }
