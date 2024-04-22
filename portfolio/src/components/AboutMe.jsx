@@ -1,5 +1,8 @@
 import React from 'react'
-
+import github from '../assets/image/GitHub.png'
+import instagram from '../assets/image/Instagram.png'
+import linkedin from '../assets/image/LinkedIn.png'
+import profile from '../assets/image/PROFILE.png'
 export default function AboutMe() {
   return (
     <div>
@@ -7,7 +10,7 @@ export default function AboutMe() {
             <div className="about-me">
                 <div className="face-wrapper-two">
                     <div className="face-two">
-                        <img className="face-intro-img" src="image\PROFILE.png" alt="Profile" />
+                        <img className="face-intro-img" src={profile} alt="Profile" />
                     </div>
                 </div>
                 <div className="about-me-text-wrapper">
@@ -25,13 +28,13 @@ export default function AboutMe() {
                             </h4>
                             <div className="images">
                                 <a href="https://github.com/aayushmehta02">
-                                    <img className="card-img" src="image\GitHub.png" alt="GitHub" />
+                                    <img className="card-img" src={github} alt="GitHub" />
                                 </a>
                                 <a href="https://www.linkedin.com/in/aayush-mehta-6b7666242/">
-                                    <img className="card-img" src="image\LinkedIn.png" alt="LinkedIn" />
+                                    <img className="card-img" src={linkedin} alt="LinkedIn" />
                                 </a>
                                 <a href="https://www.instagram.com/aayush_020/?next=%2F">
-                                    <img className="card-img" src="image\Instagram.png" alt="Instagram" />
+                                    <img className="card-img" src={instagram} alt="Instagram" />
                                 </a>
                             </div>
                         </div>

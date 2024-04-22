@@ -1,58 +1,218 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import image_Html from '../assets/image/Html 5.png';
+import image_js from '../assets/image/JavaScript.png';
+import image_python from '../assets/image/Python.png';
+import image_react from '../assets/image/React.png';
 const Skills = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const totalCardsLength = 8;
-
+    useEffect(() => {
+        const swiper = document.querySelector('.swiper_container').swiper;
+      swiper.on('slideChange', () => {
+        const slides = document.querySelectorAll('.swiper-slide');
+        const activeIndex = swiper.activeIndex;
+        
+        slides.forEach((slide, index) => {
+          if (index !== activeIndex) {
+            slide.style.height = '100%'; // Increase height for non-central images
+          } else {
+            slide.style.height = '100%'; // Decrease height for central image
+          }
+        });
+      });
+    }, []);
     
-    const nextSlide = () => {
-        setCurrentIndex((currentIndex + 1) % (totalCardsLength - 2));
-    }
-
-    
-    const prevSlide = () => {
-        setCurrentIndex((currentIndex - 1 + (totalCardsLength - 2)) % (totalCardsLength - 2));
-    }
     return (
-        <section className="skills-wrapper" id="section2">
-            <div className="skills">
-                <div className="skills-text" style={{ paddingTop: '5%', fontSize: '1.5em' }}>
-                    <h1>SKILLS</h1>
-                </div>
-                <div className="carousel-container">
-                    <div className="carousel-wrapper" id="carouselWrapper">
-                        <div className="card card-responsive">
-                            <h2>React</h2>
-                            <img src="image/React.png" alt="React Logo" />
-                        </div>
-                        <div className="card card-responsive">
-                            <h2>JavaScript</h2>
-                            <img src="image/JavaScript.png" alt="JavaScript Logo" />
-                        </div>
-                        <div className="card card-responsive">
-                            <h2>Python</h2>
-                            <img src="image\Python.png" alt="Python Logo" />
-                        </div>
-                        <div className="card card-responsive">
-                            <h2>React-Native</h2>
-                            <img src="image/React.png" alt="React-Native Logo" />
-                        </div>
-                        <div className="card card-responsive">
-                            <h2>HTML</h2>
-                            <img src="image\Html 5.png" alt="HTML Logo" />
-                        </div>
-                        <div className="card card-responsive">
-                            <h2>CSS</h2>
-                            <img src="image/CSS3.png" alt="CSS3 Logo" />
-                        </div>
-                    </div>
-                </div>
-                <div className="buttons">
-                    <button className="btn" onClick={prevSlide}> &lt; </button>
-                    <button className="btn" onClick={nextSlide}> &gt; </button>
-                </div>
+        <div className="container">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 22,
+          stretch: 0,
+          depth: 21,
+          modifier: 1.2,
+        }}
+        pagination={{ el: '.swiper-pagination', clickable: true }}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          clickable: true,
+        }}
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="swiper_container"
+      >
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_react} className='college-img'/>
+
             </div>
-        </section>
+           
+            <div>
+            <p>
+              REACT
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_react} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              MONGODB
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_react} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              NODEJS
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_react} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              EXPRESSJS
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_Html} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              HTML
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_react} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              CSS
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_python} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              PYTHON
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='card1'>
+          <div className='cover'>
+            <div className='img'>
+              <img src={image_js} className='college-img'/>
+
+            </div>
+           
+            <div>
+            <p>
+              JAVASCRIPT
+              </p>
+            </div>
+            </div>
+              
+              
+             
+            
+          </div>
+        </SwiperSlide>
+        
+      </Swiper>
+      </div>
     );
 }
 

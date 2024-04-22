@@ -1,4 +1,5 @@
 import React from 'react'
+import profile_img from '../assets/image/PROFILE.png'
 
 export default function Intro() {
   return (
@@ -14,7 +15,7 @@ export default function Intro() {
                 </div>
                 <div className="face-wrapper">
                     <div className="face">
-                        <img className="face-intro-img" src="image\PROFILE.png" alt="Profile" />
+                        <img className="face-intro-img" src={profile_img} alt="Profile" />
                     </div>
                 </div>
                 <div className="black"></div>
