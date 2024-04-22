@@ -1,6 +1,4 @@
 import { React, useEffect } from 'react';
-import { CiLocationOn } from "react-icons/ci";
-import { FaBook } from "react-icons/fa";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/navigation';
@@ -26,44 +24,28 @@ function App() {
           slide.style.opacity = '0.7'; // Adjust the opacity as needed
         } else {
           slide.style.opacity = '1';
+          
         }
       });
     });
   }, []);
 
   return (
-    <div className="container" >
+    <div className="container" style={{width: '100%'}}>
     
-      <div className='bottom'>
-        <p>
-        Indian Institute Of Technology–Madras
-        </p>
-        <div className='loc_course'>
-        <div className='location'>
-        <CiLocationOn />
-        Chennai, India
-        </div>
-        <div className='courses'>
-        <FaBook />
-        121 courses
-        </div>
-      </div>
-      </div>
+      <div style={{maxWidth: '70%', margin: '0 auto' }}>
     
-      <Swiper
+    <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={'auto'}
-        spaceBetween={-1}
-
+        slidesPerView={"auto"}
         coverflowEffect={{
-          rotate: 40,
+          rotate: 50,
           stretch: 0,
-          depth: 200,
+          depth: 100,
           modifier: 1,
-          slideShadows: false,
         }}
         pagination={{ el: '.swiper-pagination', clickable: true }}
         navigation={{
@@ -74,58 +56,82 @@ function App() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center', height: '100vh', width: '40%' }}> 
-  <div className='card1' style={{height: "100%", width: "50%", backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
     <div className='text'>
       <h1>REACT</h1>
     </div>
     <div className='img'>
-      <img src={image} className='iit-logo' style={{maxWidth: '100%', maxHeight: '100%'}}/>
+      <img src={image} className='iit-logo' />
     </div>
   </div>
 </SwiperSlide>
-        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center', height: '100vh', width: '40%'}}>
-  <div className='card1' style={{height: "100%", width: "50%", backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
     <div className='text'>
       <h1>REACT</h1>
     </div>
     <div className='img'>
-      <img src={image} className='iit-logo' style={{maxWidth: '100%', maxHeight: '100%'}}/>
+      <img src={image} className='iit-logo' />
     </div>
   </div>
 </SwiperSlide>
-        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center', height: '100vh', width: '40%' }}>
-  <div className='card1' style={{height: "100%", width: "70%", backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
     <div className='text'>
       <h1>REACT</h1>
     </div>
     <div className='img'>
-      <img src={image} className='iit-logo' style={{maxWidth: '100%', maxHeight: '100%'}}/>
+      <img src={image} className='iit-logo' />
     </div>
   </div>
 </SwiperSlide>
-        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-  <div className='card1' style={{height: "100%", width: "70%", backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
     <div className='text'>
       <h1>REACT</h1>
     </div>
     <div className='img'>
-      <img src={image} className='iit-logo' style={{maxWidth: '100%', maxHeight: '100%'}}/>
+      <img src={image} className='iit-logo' />
     </div>
   </div>
 </SwiperSlide>
-        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-    
-  <div className='card1' style={{height: "100%", width: "90%", backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
     <div className='text'>
       <h1>REACT</h1>
     </div>
     <div className='img'>
-      <img src={image} className='iit-logo' style={{maxWidth: '100%', maxHeight: '100%'}}/>
+      <img src={image} className='iit-logo' />
     </div>
   </div>
 </SwiperSlide>
-       
+        
+        <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
+    <div className='text'>
+      <h1>REACT</h1>
+    </div>
+    <div className='img'>
+      <img src={image} className='iit-logo' />
+    </div>
+  </div>
+</SwiperSlide>
+  
+  <SwiperSlide style={{display:"flex", flexDirection:"column", alignItems: "center", justifyContent: 'center', alignItems: 'center',  width:'70%'}}> 
+  <div className='card1' style={{ backgroundColor:'black', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width:'80%'}}>
+    <div className='text'>
+      <h1>REACT</h1>
+    </div>
+    <div className='img'>
+      <img src={image} className='iit-logo' />
+    </div>
+  </div>
+</SwiperSlide>
         
 
         <div className="slider-controler">
@@ -138,6 +144,7 @@ function App() {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
+      </div>
     </div>
   );
 }
