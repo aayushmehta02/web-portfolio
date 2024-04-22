@@ -315,7 +315,7 @@ body{
 .intro-wrapper{
  
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-color: #000;
   display: flex;
   position: absolute;
@@ -353,7 +353,7 @@ h1{
   padding-left: 8%;
 }
 .face-img{
-  height: 80%;
+  height: 70%;
   width: 50%;
   position: absolute;
   right: 30%;
@@ -439,17 +439,17 @@ h1{
 /* about-me */
 .about-me-wrapper{
   width: 100%;
-  background: #323131;
+  
   padding-top: 120vh;
   height: 80vh;
-
+  background: #323131;
   
 }
 
 .about-me{
   width: 100%;
   position: relative;
-  
+  background: #323131;
  height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);

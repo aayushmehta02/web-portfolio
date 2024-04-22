@@ -140,8 +140,8 @@ h1{
 /* about-me */
   .about-me-wrapper{
     width: 100%;
-    background: #323131;
-    padding-top: 120vh;
+    
+    ;
     height: 80vh;
 
     
@@ -150,8 +150,9 @@ h1{
   .about-me{
     width: 100%;
     position: relative;
+    background: #323131 !important;
     
-   height: 80vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   
