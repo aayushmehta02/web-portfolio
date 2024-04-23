@@ -16,7 +16,7 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{height: '100%'}}>
       <Intro/>
       <AboutMe/>
       <Skills/>

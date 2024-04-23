@@ -28,7 +28,13 @@ const Skills = () => {
     }, []);
     
     return (
-        <div className="container">
+        <div style={{height:'50vh', backgroundColor:'black', display: 'flex', flexDirection:'column', alignContent:'center', alignContent:'center', justifyContent:'center', justifyItems:'center'}}>
+        
+        <div className="container" style={{backgroundColor:'black', height: '100%'}}>
+        <div  style={{color: 'white'}}>
+          <h1>Skills</h1>
+          
+        </div>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -50,6 +56,7 @@ const Skills = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
+      
         <SwiperSlide>
           <div className='card1'>
           <div className='cover'>
@@ -212,6 +219,7 @@ const Skills = () => {
         </SwiperSlide>
         
       </Swiper>
+      </div>
       </div>
     );
 }
