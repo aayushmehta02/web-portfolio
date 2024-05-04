@@ -1,0 +1,39 @@
+.book {
+    width: 200px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    display: inline-block;
+    position: relative; /* Needed for proper positioning of elements */
+    background-color: #ccc; /* Set a base color for the book */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.2); /* Add a slight shadow */
+  }
+  
+  .cover {
+    width: 80%;
+    height: 100%;
+    background-color: #999; /* Set cover color */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .spine {
+    width: 20%;
+    height: 100%;
+    background-color: #aaa; /* Set spine color */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .pages {
+    width: 70%;
+    height: 80%;
+    background-color: #fff; /* Set page color */
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border-top-left-radius: 5px; /* Round top left corner of pages */
+    border-bottom-left-radius: 5px; /* Round bottom left corner of pages */
+  }
+  
