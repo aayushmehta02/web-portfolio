@@ -1,33 +1,35 @@
-import { React } from 'react';
-// import 'styles.css';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import AboutMe from './components/AboutMe';
-
-import Experience from './components/Experience';
-import Intro from './components/Intro';
-import Skills from './components/Skills';
-// import slide_image_5 from './assets/images/img_5.jpg';
-// import slide_image_6 from './assets/images/img_6.jpg';
-// import slide_image_7 from './assets/images/img_7.jpg';
-
-function App() {
+import { useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
+import Hero from './sections/Hero'
+import Navbar from './sections/Navbar'
 
 
-  return (
-    <div style={{height: '100%'}}>
-      <Intro/>
-      <AboutMe/>
-      <Skills/>
-      {/* <Book/> */}
-      <Experience/>
-      
+const RotatingCube=()=>{
+  const meshRef = useRef()
+
+  useFrame(()=>{
+    if (meshRef.current){
+      meshRef.current.rotation.x += 0.01
+      meshRef.current.rotation.y += 0.01
+    }
+  })
+  return(
     
-    
-    </div>
-  );
+
+    <mesh ref={meshRef} position={[-2.5,1.5,0]}>
+
+    <cylinderGeometry args={[1,1,1]}/>
+    <meshLambertMaterial color="#468585" emissive="#468585" />
+    </mesh>
+    )
+}
+const App = () =>{
+  return(
+    <main>
+      <Navbar/>
+      <Hero/>
+    </main>
+  )
 }
 
-export default App;
+export default App

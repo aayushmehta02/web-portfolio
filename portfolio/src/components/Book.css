@@ -16,7 +16,12 @@
     top: 0;
     left: 0;
   }
-  
+  .experience_text{
+    width: 70%;
+    height: 70%;
+    background-color: #fff; /* Set page color */
+
+  }
   .spine {
     width: 20%;
     height: 100%;

@@ -6,14 +6,17 @@ const Experience = () => {
     <section className="experience-body" id="section3">
 
     <div className="book">
+    <div className='experience_text'>
     <h5>- WORKED AS A FRONT END DEVELOPER </h5>
                 <h5>- DEVELOPED THE LANDING PAGE OF THEIR ECOM WEBSITE </h5>
                 <h5>- DEVELOPED THE POLICIES PART OF THEIR DASHBOARD APPLICATION </h5>
+    </div>
+      
       <div className="cover">
         <p>DIVINE SOLITARIES</p>
       </div>
     </div>
-      <div className="experience-word">
+      {/* <div className="experience-word">
         <h1>EXPERIENCE</h1>
       </div>
 
@@ -54,7 +57,7 @@ const Experience = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
