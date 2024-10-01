@@ -1,7 +1,6 @@
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import Hero from './sections/Hero'
-import Navbar from './sections/Navbar'
+import AnimatedBoxes from './components/Animation'
 
 
 const RotatingCube=()=>{
@@ -26,8 +25,7 @@ const RotatingCube=()=>{
 const App = () =>{
   return(
     <main>
-      <Navbar/>
-      <Hero/>
+      <AnimatedBoxes/>
     </main>
   )
 }
