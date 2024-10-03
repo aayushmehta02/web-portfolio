@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import AnimatedBoxes from './components/Animation';
+import About from './sections/About';
 import Hero from './sections/Hero';
 import Navbar from './sections/Navbar';
 
@@ -26,33 +26,36 @@ const RotatingCube = () => {
 // App Component
 const App = () => {
   return (
-    <main style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
-      {/* Background component */}
-      <AnimatedBoxes style={backgroundStyle} />
-
-      {/* Foreground content */}
+    <main className='overflow-x-hidden'>
       <div style={contentStyle}>
+      <Navbar />
         <Navbar />
         <Hero />
+        <About/>
+        
       </div>
+      
+
+      
+      
     </main>
   );
 };
 
-// Styling for background container
+
 const backgroundStyle = {
   position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
   height: '100%',
-  zIndex: -80, // Ensure it stays in the background
+  zIndex: -1, 
 };
 
 // Styling for main content
 const contentStyle = {
   position: 'relative',
-  zIndex: 5, // Ensure content is on top of the background
+  zIndex: 1,
 };
 
 export default App;

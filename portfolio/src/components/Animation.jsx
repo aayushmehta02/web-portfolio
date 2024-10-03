@@ -15,7 +15,7 @@ const AnimatedBoxes = () => {
       backgroundColor: 'darkblue',
       stagger: {
         grid: [7, 15],
-        from: index, // Start staggering from the hovered box
+        from: index, 
         amount: 1.5,
       },
     });
@@ -23,7 +23,7 @@ const AnimatedBoxes = () => {
 
   // Function to reset animation on mouse leave
   const handleMouseLeave = () => {
-    if (lastIndex !== null) { // Only reset if there's a last index
+    if (lastIndex !== null) {
       gsap.to(".box", {
         duration: 0.8,
         scale: 1,
