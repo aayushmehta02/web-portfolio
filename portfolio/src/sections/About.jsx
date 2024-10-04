@@ -1,11 +1,31 @@
 import React from 'react';
 import Globe from 'react-globe.gl';
+import { useMediaQuery } from 'react-responsive';
 import Buttons from '../components/Buttons';
 
 const About = () => {
   const { useState, useEffect } = React;
-  //copy text 
+  
+  const isMobile = useMediaQuery({
+    query: '(max-width: 426px)'
+  })
   const [hasCopied, setHasCopied] = useState(false);
+  const [dimensions, setDimensions] = useState({ width: 400, height: 400 });
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      const width = window.innerWidth < 640 ? window.innerWidth * 0.83 : 400; 
+      const height = window.innerHeight < 640 ? window.innerHeight * 0.5 : 400; 
+      setDimensions({ width, height });
+    };
+
+    window.addEventListener('resize', updateDimensions);
+
+    // Call once to set initial size
+    updateDimensions();
+
+    return () => window.removeEventListener('resize', updateDimensions);
+  },[])
 
   const handleCopy = () => {
     navigator.clipboard.writeText(' adrian@jsmastery.pro');
@@ -39,9 +59,8 @@ const About = () => {
         labelDotRadius={d => Math.sqrt(d.properties.pop_max) * 4e-4}
         labelColor={() => 'rgba(255, 165, 0, 0.75)'}
         labelResolution={2}
-        height={350}
-        width={400}
-        
+        height={dimensions.height} 
+        width={ isMobile ? window.innerWidth * 0.75 :dimensions.width}
         autoRotate={true} 
         autoRotateSpeed={10} 
         
@@ -72,13 +91,13 @@ const About = () => {
         </div>
         <div className='col-span-1 xl:row-span-4'>
           <div className='grid-container'>
-            <div className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'>
+            <div className='rounded-3xl w-full sm:h-[326px]  flex-col justify-center items-center'>
               <World />
             </div>
-            <div>
+            <div className='mt-20'>
               <p className='grid-headtext'>Ready to collaborate from anywhere in the world.</p>
               <p className='grid-subtext'>Anytime, Anywhere</p>
-              <Buttons name="Contact Me" isBeam containerClass="w-full mt-10"/>
+              <Buttons name="Contact Me" isBeam containerClass="sm:w-fit w-full sm:min-w-96 mt-10"/>
             </div>
           </div>
         </div>
