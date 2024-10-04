@@ -26,6 +26,7 @@ const RotatingCube = () => {
 // App Component
 const App = () => {
   return (
+    
     <main className='overflow-x-hidden'>
       <div style={contentStyle}>
       <Navbar />
