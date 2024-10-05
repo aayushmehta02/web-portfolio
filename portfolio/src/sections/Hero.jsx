@@ -9,6 +9,7 @@ import HackerRoom from '../components/HackerRoom';
 import ReactLogo from '../components/ReactLogo';
 import Rings from '../components/Rings';
 import Target from '../components/Target';
+
 const Hero = () => {
   const isMobile = useMediaQuery({
     query: '(max-width: 426px)'

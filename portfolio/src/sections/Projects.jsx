@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { Center } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useState } from 'react';
+import CanvasLoader from '../components/CanvasLoader';
+import { DemoComputer } from '../components/DemoComputer';
 import { myProjects } from '../constants';
-
-
 
 const projectCount = myProjects.length;
 const Projects = () => {
@@ -23,7 +25,7 @@ const Projects = () => {
     
   return (
     <div>
-        <section className='c-space my-20'>
+        <section className='c-space my-20' id='about'>
             <p className='head-text'>My work</p>
             <div className='grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full'>
                 <div className='flex flex-col gap-5 relative sm:p-10 oy-10 px-5 shadow-2xl shadow-black-200'>
@@ -52,7 +54,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer">
               <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3 cursor-pointer" />
             </a>
                 </div>
                 <div className='flex justify-between items-center mt-7'>
@@ -63,6 +65,21 @@ const Projects = () => {
               <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
             </button>
                 </div>
+            </div>
+            <div className='border nprder-black-300 bg-black-200 rounded-lg h-96 md:h-full'>
+              <Canvas>
+                <ambientLight intensity={Math.PI}/>
+                <directionalLight position={[10,10,5]}/>
+                <Center>
+                  <Suspense fallback={<CanvasLoader/>}>
+                  <group scale={2} >
+
+                    <DemoComputer scale={10} rotation={[-Math.PI , Math.PI, 0]} position={[-1,-1,0]} />
+                  </group>
+
+                  </Suspense>
+                </Center>
+              </Canvas>
             </div>
             </div>
         </section>

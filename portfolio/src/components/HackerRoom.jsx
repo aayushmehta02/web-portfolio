@@ -30,7 +30,7 @@ const HackerRoom = (props) => {
         receiveShadow
         geometry={nodes.retro_computer_setup_retro_computer_setup_Mat_0.geometry}
         material={materials.retro_computer_setup_Mat}
-        rotation={[-Math.PI / 2, 0, 0]} // Initial rotation
+        rotation={[-Math.PI / 2, 0, 0]} 
       />
     </group>
   )
