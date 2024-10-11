@@ -101,7 +101,7 @@ body {
 
   /*  work experience section */
   .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+    @apply  gap-5 mt-12;
   }
 
   .work-canvas {
@@ -126,7 +126,8 @@ body {
 
   /* contact section */
   .contact-container {
-    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
+    @apply max-w-5xl relative z-10 sm:px-10 px-5 mt-12;
+    @apply md:max-w-2xl lg:max-w-3xl;
   }
 
   .field-label {
