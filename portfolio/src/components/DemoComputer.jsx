@@ -9,17 +9,16 @@ export function DemoComputer(props) {
   // Get the mouse position from useThree inside the component
   const { mouse } = useThree();
   const screenTexture = useTexture('/assets/socioconnect.png');
-  screenTexture.flipY = false;
+  screenTexture.flipY = true; // Flip the texture vertically
 
-  // Adjust the scaling of the texture so that it fits 3/4th of the screen
-  screenTexture.repeat.set(1, 1);  // Set the full texture scale
-  screenTexture.needsUpdate = true;
+  // Set the texture scale to fit the screen appropriately
+  screenTexture.repeat.set(1, 1); // You might need to adjust these values to fit correctly
 
   // Rotation based on mouse movement
   useFrame(() => {
     if (groupRef.current) {
-      const rotationAmount = 1.2;
-      const maxRotation = Math.PI / 2;
+      const rotationAmount = 0.5; // Reduced for smoother rotation
+      const maxRotation = Math.PI / 8; // Less maximum rotation for stability
 
       groupRef.current.rotation.x = Math.max(
         -maxRotation,
@@ -34,7 +33,6 @@ export function DemoComputer(props) {
 
   return (
     <group {...props} dispose={null} ref={groupRef}>
-      {/* Applying default rotation to correct the initial 90-degree rotation */}
       <group rotation={[0, Math.PI / 2, 0]} position={[0.1212586, -0.1, -0.09]} scale={1.8}>
         <mesh
           castShadow
@@ -42,24 +40,12 @@ export function DemoComputer(props) {
           geometry={nodes.Object_6.geometry}
           material={materials.MacBookPro}
         >
-          {/* Adjust UVs to fit 3/4th of the screen */}
           <meshStandardMaterial
             attach="material"
             transparent={true}
             map={screenTexture}
-          >
-            <primitive
-              attach="geometry"
-              object={nodes.Object_6.geometry}
-              onUpdate={(self) => {
-                self.attributes.uv.array = self.attributes.uv.array.map((uv, i) => {
-                  if (i % 2 === 0) return uv * 0.88; // scale horizontally (x-axis)
-                  return uv * 0.88; // scale vertically (y-axis)
-                });
-                self.attributes.uv.needsUpdate = true;
-              }}
-            />
-          </meshStandardMaterial>
+            alphaTest={0.5} // Ensure transparency works correctly
+          />
         </mesh>
         <mesh
           castShadow
