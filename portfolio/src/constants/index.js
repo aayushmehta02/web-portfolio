@@ -210,7 +210,7 @@ export const navLinks = [
       name: 'Divine Solitaires',
       pos: 'Freelancer',
       duration: '2022 - Present',
-      title: "Served as a Full Stack Developer, contributing expertise in crafting captivating digital experiences. Innovatively designed and executed a captivating landing page for the company’s ecommerce website, enhancing brand visibility and engagement.Skillfully contributed in the development of the brand's mobile application using React Native, delivering seamless user experiences across platforms. Additionally, spearheaded the creation and deployment of newsletters, effectively driving customer engagement and retention.",
+      title: "Served as a Full Stack Developer, contributing expertise in crafting captivating digital experiences. Innovatively designed and executed a captivating landing page for the company’s ecommerce website, enhancing brand visibility and engagement.Skillfully contributed in the development of the brand's mobile application using React Native, delivering seamless user experiences across platforms. ",
       icon: '/assets/divine_logo.png',
       animation: 'victory',
     },

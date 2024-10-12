@@ -29,7 +29,7 @@ const Hero = () => {
                 
       <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 <HackerRoom 
-        scale={isMobile ? 0.13 : 0.18} 
+        scale={isMobile ? 0.12 : 0.18} 
         position={isMobile? [-1, -4.5, 4]:[-2, -7.5, 4]} 
         rotation={[Math.PI /15, -Math.PI / 6, 0]} 
 />

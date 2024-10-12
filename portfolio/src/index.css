@@ -170,6 +170,16 @@ body {
   );
 }
 
+/* keyboard */
+.kbd {
+  @apply bg-gray-200 border border-gray-400 rounded p-2; /* Base styles for all keys */
+}
+
+.shaded {
+  @apply bg-yellow-300; /* Shaded background color */
+  /* You can also customize text color or other properties here */
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);
