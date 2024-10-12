@@ -76,7 +76,7 @@ const About = () => {
             <img src='/assets/grid1.png' alt='grid-1' className='w-full sm:h-[276px] h-fit object-contain' />
             <div>
               <p className='grid-headtext'>Hi I am Aayush</p>
-              <p className='grid-subtext'>With over 4 years of experience, I have honed my skills in fronted and backend development</p>
+              <p className='grid-subtext'>With over 4 years of experience, I have honed my skills in website and app development.</p>
             </div>
           </div>
         </div>

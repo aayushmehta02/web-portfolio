@@ -35,9 +35,9 @@ const Projects = () => {
             <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
           </div>
 
-          <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
+          {/* <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
             <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
-          </div>
+          </div> */}
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
             <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
@@ -55,14 +55,23 @@ const Projects = () => {
               ))}
             </div>
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
+            <div className="flex  gap-3 mt-5">
+  {currentProject.hrefs && currentProject.hrefs.length > 0 && currentProject.hrefs.map((link, index) => (
+    <a
+      key={index}
+      className="flex items-center gap-2 cursor-pointer text-white-600 z-10"
+      href={link.url}
+      target="_blank"
+      rel="noreferrer"
+      style={{ zIndex: 10 }}
+    >
+      <p>   {link.label}  </p>
+      <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+    </a>
+  ))}
+</div>
+
+
           </div>
 
           <div className="flex justify-between items-center mt-7">
@@ -70,7 +79,7 @@ const Projects = () => {
               <img src="/assets/left-arrow.png" alt="left arrow" />
             </button>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
+            <button className="arrow-btn" style={{zIndex: 10}} onClick={() => handleNavigation('next')}>
               <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
             </button>
           </div>
