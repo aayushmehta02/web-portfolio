@@ -33,7 +33,7 @@ const About = () => {
   }, []);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' adrian@jsmastery.pro');
+    navigator.clipboard.writeText('aayushmehta022@gmail.com');
     setHasCopied(true);
 
     setTimeout(() => {
