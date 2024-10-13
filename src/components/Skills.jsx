@@ -28,7 +28,7 @@ const Skills = () => {
     <div
       className="relative group inline-block"
       onClick={toggleDropdown}
-      ref={dropdownRef} // Attach the ref to the main container
+      
     >
       <div className="bg-white py-2 rounded-md shadow-lg hover:cursor-pointer flex justify-center items-center gap-4 px-4">
         <svg
@@ -52,9 +52,10 @@ const Skills = () => {
 
       {/* Dropdown menu */}
       <div
+      ref={dropdownRef} 
         className={`absolute left-0 mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-lg transition-opacity duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-        } z-10`} // Added z-index here
+        } z-10`} 
       >
         <ul className="p-4 space-y-1">
           <li className="py-1">&#128193; src</li>
