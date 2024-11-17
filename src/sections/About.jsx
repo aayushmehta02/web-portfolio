@@ -10,7 +10,8 @@ import Skills from '../components/Skills';
 
 const About = () => {
   const { useState, useEffect } = React;
-  
+
+
   const isMobile = useMediaQuery({
     query: '(max-width: 426px)'
   });
