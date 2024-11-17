@@ -81,12 +81,7 @@ export const navLinks = [
         }
       ],
       texture: '/textures/project/project2.mp4',
-      // logo: '/assets/project-logo2.png',
-      // logoStyle: {
-      //   backgroundColor: '#13202F',
-      //   border: '0.2px solid #17293E',
-      //   boxShadow: '0px 0px 60px 0px #2F6DB54D',
-      // },
+      
       spotlight: '/assets/spotlight2.png',
       tags: [
         {
@@ -226,13 +221,5 @@ export const navLinks = [
       icon: '/assets/mergrr_Nb.png',
       animation: 'clapping',
     },
-    // {
-    //   id: 3,
-    //   name: 'Notion',
-    //   pos: 'Junior Web Developer',
-    //   duration: '2019 - 2020',
-    //   title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-    //   icon: '/assets/notion.svg',
-    //   animation: 'salute',
-    // },
+   
   ];

@@ -3,8 +3,9 @@ const Footer = () => {
         <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-center items-center flex-wrap gap-6">
             <section className="flex justify-center items-center space-x-6">
                 {/* <!-- GitHub Button --> */}
+                <a href="https://github.com/aayushmehta02" target="_blank" rel="noopener noreferrer">
                 <button
-                    href="/"
+                    
                     className="group flex justify-center p-3 rounded-md drop-shadow-xl bg-[#333] text-white font-semibold hover:rounded-[50%] transition-all duration-500 hover:bg-gray-700"
                 >
                     <svg
@@ -25,8 +26,9 @@ const Footer = () => {
                         GitHub
                     </span>
                 </button>
-
+                </a>
                 {/* <!-- LinkedIn Button --> */}
+                <a href="https://www.linkedin.com/in/aayush-mehta-6b7666242/" target="_blank" rel="noopener noreferrer">
                 <button
                     href="/"
                     className="group flex justify-center p-3 rounded-md drop-shadow-xl bg-[#0077b5] text-white font-semibold hover:rounded-[50%] transition-all duration-500 hover:bg-[#005582]"
@@ -49,8 +51,9 @@ const Footer = () => {
                         LinkedIn
                     </span>
                 </button>
-
+                </a>
                 {/* <!-- Instagram Button --> */}
+                <a href="https://www.instagram.com/aayush_020/" target="_blank" rel="noopener noreferrer">
                 <button
                     href="/"
                     className="group flex justify-center p-3 rounded-md drop-shadow-xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white font-semibold hover:rounded-[50%] transition-all duration-500 hover:from-pink-500 hover:to-orange-400"
@@ -73,6 +76,7 @@ const Footer = () => {
                         Instagram
                     </span>
                 </button>
+                </a>
             </section>
         </footer>
     );
