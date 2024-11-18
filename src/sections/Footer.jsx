@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/react";
+
 const Footer = () => {
     return (
         <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-center items-center flex-wrap gap-6">
@@ -77,7 +79,12 @@ const Footer = () => {
                     </span>
                 </button>
                 </a>
+                <div className="bg-white">
+                <Analytics/>
+                </div>
+                
             </section>
+           
         </footer>
     );
 };

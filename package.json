@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "homepage": "https://github.com/aayushmehta02/web-portfolio",
-
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -17,6 +16,7 @@
     "@react-three/drei": "^9.112.0",
     "@react-three/fiber": "^8.17.7",
     "@types/three": "^0.168.0",
+    "@vercel/analytics": "^1.4.0",
     "animated-backgrounds": "^1.0.11",
     "animejs": "^3.2.2",
     "clsx": "^2.1.1",
