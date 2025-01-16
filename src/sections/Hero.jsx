@@ -39,8 +39,8 @@ const Hero = () => {
             </Suspense>
             <group>
     
-    <Target position={isMobile ? [5, -5, 7] : [15, -10, 0]} scale={isMobile ? 0.5 : 0.8} />
-     <Rings position={isMobile ? [-13, -14, 0] : [-30, -15, 0]}/> 
+    <Target position={isMobile ? [5, -14, 7] : [15, -10, 0]} scale={isMobile ? 0.5 : 0.8} />
+     <Rings position={isMobile ? [-13, -2.5, 0] : [-30, -15, 0]}/> 
     <Cube position={isMobile ? [5, 5, 0] : [15, 2, 0]} scale={isMobile ? 0.7 : 0.8}/>
 <ReactLogo position={isMobile ? [-5, 5, 0] : [-15, 2, 0]} scale={isMobile ? 0.5 : 0.8}/>
   </group>
