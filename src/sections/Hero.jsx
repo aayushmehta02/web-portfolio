@@ -30,7 +30,7 @@ const Hero = () => {
       <directionalLight position={[10, 10, 10]} intensity={0.5} />
                 <HackerRoom 
         scale={isMobile ? 0.12 : 0.18} 
-        position={isMobile? [-1, -4.5, 4]:[-2, -7.5, 4]} 
+        position={isMobile? [0.5, -4.5, 4]:[-2, -7.5, 4]} 
         rotation={[Math.PI /15, -Math.PI / 6, 0]} 
 />
 <PerspectiveCamera makeDefault position = {[0,0,35]}/>
@@ -39,8 +39,8 @@ const Hero = () => {
             </Suspense>
             <group>
     
-    <Target position={isMobile ? [5, -5, 0] : [15, -10, 0]} scale={isMobile ? 0.5 : 0.8} />
-     <Rings position={isMobile ? [-15, -14, 0] : [-30, -15, 0]}/> 
+    <Target position={isMobile ? [5, 0, 7] : [15, -10, 0]} scale={isMobile ? 0.5 : 0.8} />
+     <Rings position={isMobile ? [-13, -14, 0] : [-30, -15, 0]}/> 
     <Cube position={isMobile ? [5, 5, 0] : [15, 2, 0]} scale={isMobile ? 0.7 : 0.8}/>
 <ReactLogo position={isMobile ? [-5, 5, 0] : [-15, 2, 0]} scale={isMobile ? 0.5 : 0.8}/>
   </group>
