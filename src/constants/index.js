@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 export const navLinks = [
     {
       id: 1,
@@ -202,6 +204,21 @@ export const navLinks = [
   export const workExperiences = [
     {
       id: 1,
+      name: "RUDRA Cybersecurity",
+      pos: "Full Stack Developer",
+      duration: "May 2025 - Present",
+      title: "At Rudra, I worked with an 8-member engineering team to build secure and scalable backend systems using FastAPI, Hasura, and GraphQL. One of my core contributions was designing a high-performance, asynchronous document analysis pipeline in Python, processing over a million records through AI-based contextual enrichment and smart deduplication logic, stored in Elasticsearch. I also helped implement a secure MFA system and contributed to core backend workflows, improving system reliability and scalability across services.",
+      icon: '/assets/rudra.jpeg',
+    },
+    {
+      id: 2,
+      name: "TUSTA",
+      pos:"Software Engineer Intern",
+      duration: "Feb 2025 - May 2025",
+      title: "During my time at Tusta, I worked on building algorithmic trading infrastructure. I cleaned and structured over a year of F&O data to support precise backtesting, integrated multiple broker APIs in Python, and helped ship scalable features on the company’s trading platform using React and backend Python services. My contributions focused on performance, data integrity, and an intuitive trading experience across the full stack.",
+    },
+    {
+      id: 2,
       name: 'Divine Solitaires',
       pos: 'Freelancer',
       duration: '2022 - Present',
@@ -210,14 +227,11 @@ export const navLinks = [
       animation: 'victory',
     },
     {
-      id: 2,
+      id: 3,
       name: 'Mergerr',
       pos: 'Full Stack Developer',
       duration: '2024',
-      
       title: "Mergr is an online dating app developed entirely by me, aimed at professionals seeking long-term relationships. I built essential features like user registration, profile management, and real-time chat.",
-      
-      
       icon: '/assets/mergrr_Nb.png',
       animation: 'clapping',
     },
